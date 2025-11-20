@@ -1,0 +1,22 @@
+{
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "JetBrains Mono, Fira Code, monospace",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 20,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "php.suggest.basic": false,
+  "intelephense.format.enable": true,
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+    "editor.formatOnSave": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.fontVariations": false
+}
