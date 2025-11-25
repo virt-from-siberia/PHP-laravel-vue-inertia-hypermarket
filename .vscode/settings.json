@@ -18,5 +18,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
-  "editor.fontVariations": false
+  "editor.fontVariations": false,
+  "editor.fontWeight": "500"
 }
