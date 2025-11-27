@@ -7,6 +7,7 @@ use App\Http\Requests\Admin\Category\StoreRequest;
 use App\Http\Requests\Admin\Category\UpdateRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Http\Resources\Category\CategoryResource;
 
 class CategoryController extends Controller
 {
@@ -15,7 +16,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::all();
+        $categories = CategoryResource::collection($categories)->resolve();
+        return inertia('Admin/Category/index', compact('categories'));
     }
 
     /**
