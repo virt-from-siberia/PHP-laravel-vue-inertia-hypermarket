@@ -15,7 +15,7 @@ class ParamController extends Controller
      */
     public function index()
     {
-        //
+        return inertia('Admin/Param/index');
     }
 
     /**

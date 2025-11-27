@@ -15,7 +15,7 @@ class ProductParentController extends Controller
      */
     public function index()
     {
-        //
+        return inertia('Admin/ProductParent/index');
     }
 
     /**
