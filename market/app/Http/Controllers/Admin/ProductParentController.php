@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\ProductParent\StoreRequest;
 use App\Http\Requests\Admin\ProductParent\UpdateRequest;
+use App\Http\Resources\Product\ProductResource;
 use App\Models\ProductParent;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,9 @@ class ProductParentController extends Controller
      */
     public function index()
     {
-        return inertia('Admin/ProductParent/index');
+        $productParents = ProductParent::all();
+        $productParents = ProductResource::collection($productParents)->resolve();
+        return inertia('Admin/ProductParent/index', props: compact('productParents'));
     }
 
     /**
